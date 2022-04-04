@@ -1,1 +1,0 @@
-This read me file will contain doumentation for the final project in cit 190.
