@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset=utf-8>
+<title>Canvas Game</title>
+<style>
+    canvas{
+        width: 800px;
+        height: 500px;
+        margin-left: 50px;
+        margin-top: 45px;
+        border: solid white 8px;
+        border-radius: 25px;
+        box-shadow: 1px 1px 1px black;
+        background-color: white;
+        background-image: url("media/background.jpg");
+    }
+    div{
+        margin: auto;
+        margin-top: 4%;
+        background-color: rgb(5, 71, 97);
+        border-radius: 25px;
+        
+        box-shadow: 3px 3px 23px rgb(6, 48, 15);
+        height:620px;
+        width:920px;
+    }
+    button{
+        margin-top: 2%;
+        margin-left: 5%;
+        padding: 5px;
+        background-color: rgb(110, 170, 150);
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px;
+        width: 75px;
+    }
+</style>
+<body>
+    <div>
+        <canvas id="gameScreen" ></canvas>
+        <br>
+        <button onclick="location=URL">RESET</button>
+        <button id="start"onclick="startGame(),playSound()">PLAY</button>
+        <button onclick="myPlayer.moveLeft()">LEFT</button>
+        <button onclick="myPlayer.moveRight()">RIGHT</button>
+        <button onclick="myPlayer.moveUp()">UP</button>
+        <button onclick="myPlayer.moveDown()">Down</button>
+    </div>
+
+</body>
+<script src="js/canvasGame.js"></script>
+</html>

@@ -1,0 +1,28 @@
+body{margin:auto;}
+#puzzle{
+    width:600px;
+    margin:auto;}
+.tile{
+    background-image:url('../media/bird.jpg');
+    width:150px;
+    height:150px;
+    float:left;
+    border:1px solid silver;
+    box-sizing:border-box;
+}
+#tile1 { background-position:0 0 }
+#tile2 { background-position:-150px -0px }
+#tile3 { background-position:-300px -0px }
+#tile4 { background-position:-450px -0px }
+#tile5 { background-position:-0px -150px }
+#tile6 { background-position:-150px -150px }
+#tile7 { background-position:-300px -150px }
+#tile8 { background-position:-450px -150px }
+#tile9 { background-position:-0px -300px }
+#tile10 { background-position:-150px -300px }
+#tile11 { background-position:-300px -300px }
+#tile12 { background-position:-450px -300px }
+#tile13 { background-position:-0px -450px }
+#tile14 { background-position:-150px -450px }
+#tile15 { background-position:-300px -450px }
+#tile16 { background-position:-450px -450px }

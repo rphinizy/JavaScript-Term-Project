@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@font-face{
+	font-family: logo;
+    src: url(../fonts/VanillaDreamers-9Y7pK.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    background-image:url('../media/carpet.jpg'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+header {
+    text-align: center;
+    margin:auto;
+    margin-top: 5%;;
+    max-width: 70%;
+    background-color: rgb(2, 13, 59);
+    box-shadow: 5px 5px 5px black;
+    padding: 2%;
+}
+
+.banner{
+    font-family: logo;
+    align-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom:3%;
+    background-color: rgb(2, 13, 59);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    border: solid white 2px;
+    padding: 10px;
+    max-width: 70%;
+    color: rgb(255, 251, 0);
+}
+
+.banner2{
+    font-family: logo;
+    align-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom:1%;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 70%;
+    color: rgb(255, 251, 0);
+}
+.gameContainer{
+    align-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom:3%;
+    background-color: rgb(2, 13, 59);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    border: solid white 2px;
+}
+
+.games{
+    font-family: logo;
+    color: rgb(138, 4, 172);
+    font-size: 1.5em;
+
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-family: cursive;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 2px 5px 15px rgba(92, 92, 92, 0.568);
+}
+
+section{
+    text-align: center;
+    background-image: linear-gradient(black, black, red);
+    border-radius:20px;
+    padding:5px;
+    margin: auto;
+    max-width: 70%;
+    box-shadow: 3px 3px 3px black;
+}
+
+
+article{
+    margin:auto;
+    max-width: 70%;
+    display: flex;
+    padding:15px;
+    overflow:auto;
+    flex-wrap:wrap;
+	align-items:center;
+	justify-content:space-between;
+    background-color: rgb(2, 13, 59);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    border: solid white 8px;
+    padding: 5%;
+}
+
+
+button {
+    background-color: crimson;
+    box-shadow: 2px 2px 2px black;
+    padding:5px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #0026ff;
+    color: white;
+  }
+  
+
+aside{
+    color: white;
+    padding:10px;
+    font-size:16px;
+    text-align:center;
+	margin-top: 10px;
+	border-radius:10px;
+    background-color: rgb(56, 18, 59);
+    border-radius:20px;	
+}
+
+section {
+    width: 200px;
+    border: solid white 4px;
+}
+
+
+a:link {
+    color:rgb(102, 57, 102);
+    text-decoration: underline;
+}
+
+a:visited {
+    color:lightseagreen;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: white;
+    background-color: rgb(128, 0, 0);
+    text-decoration: none;
+}
+
+a:active {
+    color:rgb(0, 81, 255);
+    text-decoration: underline;
+}
+
+
+.special{
+   cursor: url('../media/dice.png'),auto;
+   background:url("../media/slot.jpg") no-repeat;
+   background-size: cover;
+   cursor:url("../media/coin.png"), auto;
+   height: 100px;
+   width: 65px;
+   border: none;
+   border: solid white 3px;
+   margin:4%;
+}
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position:fixed;
+    z-index: 1;
+    top:15;
+    left:15;
+    background-color:#111;
+    overflow-x:hidden;
+    transition:0.5s;
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration:none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size: 24px;
+    margin-left: 50px;
+}
+#main{
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.myNav{
+    background-color: rgba(2, 13, 59, 0.671);
+    border-radius: 10px;
+    position: absolute;
+    padding: 3px;
+    top:0;
+}
+
+.myfooter{
+    bottom:5px;
+    margin: auto;
+    margin-top: 5%;
+    background-color: rgba(2, 13, 59, 0.671);
+    border-radius: 10px;
+}
