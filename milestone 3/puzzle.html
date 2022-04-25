@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Games"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" media="all"/>
+    <link rel="stylesheet" href="css/puzzle.css" media="all"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<title>Puzzle Game</title>
+</head>
+<style>
+    .container{
+        margin: auto;
+        padding: 20px;
+        background-color: rgb(2, 13, 59);
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px black;
+        border: solid white 2px;
+        height:640px;
+        width:640px;
+    }
+
+    .buttons {
+        margin: auto;
+        max-width: 640px;
+        background-color: rgb(2, 13, 59);
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px black;
+        border: solid white 2px;
+
+    }
+</style>
+<body>
+    <nav id="mySidenav" class="sidenav"> 
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="puzzle.html">Puzzle</a>
+        <a href="platformer.html">Platformer</a>
+        <a href="rockpaperscissors.html">Rock, Paper, Scissors!</a>
+        <a download href="ReadMe.txt"> ReadMe File</a>
+    </nav>
+    <nav is="main"> </nav>
+    <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+    
+<main> 
+    <div class="buttons comtainer">
+        <p class="banner2">Play a puzle game!</p>
+        <button id="puzzle1btn">Puzzle 1</button>
+        <button id="puzzle2btn">Puzzle 2</button>
+        <button id ='start' onclick="shuffle()">Shuffle</button>
+        <button id ='reset' onclick="reset()">Reset</button>
+        <button id ='start2' onclick="shuffle2()">Shuffle</button>
+        <button id ='reset2' onclick="reset2()">Reset</button>
+    </div>
+  
+    <div class="container" id="game1">
+        <div id="puzzle" class ="sortable">
+            <div id='tile1' class='tile'></div>
+            <div id='tile2' class='tile'></div>
+            <div id='tile3' class='tile'></div>
+            <div id='tile4' class='tile'></div>
+            <div id='tile5' class='tile'></div>
+            <div id='tile6' class='tile'></div>
+            <div id='tile7' class='tile'></div>
+            <div id='tile8' class='tile'></div>
+            <div id='tile9' class='tile'></div>
+            <div id='tile10' class='tile'></div>
+            <div id='tile11' class='tile'></div>
+            <div id='tile12' class='tile'></div>
+            <div id='tile13' class='tile'></div>
+            <div id='tile14' class='tile'></div>
+            <div id='tile15' class='tile'></div>
+            <div id='tile16' class='tile'></div>
+        </div>
+       
+    </div>
+
+    <div class="container" id="game2">
+        <div id="puzzle2" class="sortable">
+            <div id='tilealt1' class='tilealt'></div>
+            <div id='tilealt2' class='tilealt'></div>
+            <div id='tilealt3' class='tilealt'></div>
+            <div id='tilealt4' class='tilealt'></div>
+            <div id='tilealt5' class='tilealt'></div>
+            <div id='tilealt6' class='tilealt'></div>
+            <div id='tilealt7' class='tilealt'></div>
+            <div id='tilealt8' class='tilealt'></div>
+            <div id='tilealt9' class='tilealt'></div>
+        </div>
+    </div>
+
+           <footer class ="bottom myfooter" style ="text-align:center;">
+            <p>Copyright Robin Phinizy 2022</p>
+          </footer>
+
+    <script src="js/gamezone.js"></script>
+    <script>
+        //hide puzzles at first
+        $(document).ready(function() {
+            $('#game1').hide();
+            $('#game2').hide();
+            $('#start').hide();
+            $('#reset').hide();
+            $('#start2').hide();
+            $('#reset2').hide();
+        });
+        
+        //show puzzle one and buttons
+        $("#puzzle1btn").click(function(){
+            //show puzzle 1
+            $('#game1').show();
+            $('#start').show();
+            $('#reset').show();
+            //hide puzzle 2
+            $('#game2').hide();
+            $('#start2').hide();
+            $('#reset2').hide();
+        });
+
+        // show puzzle two and buttons
+        $("#puzzle2btn").click(function(){
+            //show puzzle 2
+            $('#game2').show();
+            $('#start2').show();
+            $('#reset2').show();
+            //hide puzzle 1
+            $('#game1').hide();
+            $('#start').hide();
+            $('#reset').hide();
+        });
+
+        // ************************ SHUFFLE  FUNCTIONS *****************************
+        
+          // Puzzle 1 shuffle
+        function shuffle() {
+            let tiles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+           tiles.sort(function(a, b){return 0.5 - Math.random()});
+            
+            $('#puzzle').html('');
+            for (var i = 0; i < tiles.length; i++) {
+                $( "#puzzle" ).append("<div id='tile"+tiles[i]+"' class='tile'></div>");
+            }
+        }
+
+        //Puzzle 2 shuffle 
+        function shuffle2() {
+            let tilesalt = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+           tilesalt.sort(function(a, b){return 0.5 - Math.random()});
+            
+            $('#puzzle2').html('');
+            for (var i = 0; i < tilesalt.length; i++) {
+                $( "#puzzle2" ).append("<div id='tilealt"+tilesalt[i]+"' class='tilealt'></div>");
+            }
+        }
+        // ************************ RESET FUNCTIONS *****************************
+        // Reset for puzzle 1
+         function reset(){
+            let tiles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+            $('#puzzle').html('');
+            for (var i = 0; i < tiles.length; i++) {
+                $( "#puzzle" ).append("<div id='tile"+tiles[i]+"' class='tile'></div>");
+            }
+         }
+         //reset for puzzle 2
+         function reset2(){
+            let tilesalt = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            $('#puzzle2').html('');
+            for (var i = 0; i < tilesalt.length; i++) {
+                $( "#puzzle2" ).append("<div id='tilealt"+tilesalt[i]+"' class='tilealt'></div>");
+            }
+         }
+        // uses Jquery UI for the sortable function
+        $( ".sortable" ).sortable({connectWith: ".sortable"});
+        $("#sortable").disableSelection();
+
+    </script>
+</main>
+</body>
+</html>

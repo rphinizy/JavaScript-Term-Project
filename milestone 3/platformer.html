@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Games"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/platformer.css" media="all"/>
+<title>Games to Play!</title>
+</head>
+<style>
+        canvas{
+        width: 800px;
+        height: 500px;
+        margin-left: 50px;
+        margin-top: 5px;
+        border: solid white 8px;
+        border-radius: 25px;
+        box-shadow: 1px 1px 1px black;
+        background-color: white;
+        background-image: url("media/background.jpg");
+    }
+    div{
+        margin: auto;
+        margin-top: 1%;
+        background-color: rgb(5, 71, 97);
+        border-radius: 25px;
+        
+        box-shadow: 3px 3px 23px rgb(6, 48, 15);
+        height:670px;
+        width:900px;
+    }
+    button{
+        margin-top: 2%;
+        margin-left: 5%;
+        padding: 5px;
+        background-color: rgb(110, 170, 150);
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px;
+        width: 75px;
+    }
+</style>
+<body>
+    <nav id="mySidenav" class="sidenav"> 
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="puzzle.html">Puzzle</a>
+        <a href="platformer.html">Platformer</a>
+        <a href="rockpaperscissors.html">Rock, Paper, Scissors!</a>
+        <a download href="ReadMe.txt"> ReadMe File</a>
+    </nav>
+    <nav is="main"> </nav>
+    <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+    
+    <div>
+        <p class="banner">Platformer!</p>
+        <canvas id="gameScreen" ></canvas>
+        <br>
+        <button onclick="location=URL">RESET</button>
+        <button id="start"onclick="startGame(),playSound()">PLAY</button>
+        <button onclick="myPlayer.moveLeft()">LEFT</button>
+        <button onclick="myPlayer.moveRight()">RIGHT</button>
+        <button onclick="myPlayer.moveUp()">UP</button>
+        <button onclick="myPlayer.moveDown()">Down</button>
+    </div>
+    <footer class ="bottom myfooter" style ="text-align:center;">
+    <p>Copyright Robin Phinizy 2022</p> 
+    </footer>
+    <script src="js/gamezone.js"></script>
+    <script src="js/canvasGame.js"></script>
+
+</body>
+</html>

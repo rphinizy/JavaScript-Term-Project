@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/index.css" media="all"/>
+    <link rel="stylesheet" href="css/rockpaperscissors.css" media="all"/>
+    <title>Rock, Paper, Scissors Game</title>
+</head>
+
+<body>
+    <nav id="mySidenav" class="sidenav"> 
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="puzzle.html">Puzzle</a>
+        <a href="platformer.html">Platformer</a>
+        <a href="rockpaperscissors.html">Rock, Paper, Scissors!</a>
+        <a download href="ReadMe.txt"> ReadMe File</a>
+    </nav>
+    <nav is="main"> </nav>
+    <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+<main>
+<div class="container">
+    <p class="banner2">Rock, Paper, Scissors!</p>
+    <div class="banner2">
+        <span style="color:rgb(5, 247, 5)"id="wins">WIN:</span>
+        <span style="color:red" id="loses">LOSE:</span>
+        <span style="color:rgb(255, 140, 0)" id="ties">TIE:</span>
+        </div>
+<br>
+<br>
+<table>
+    <tr>
+        <td>
+            <p class="banner3">Computer</p>
+            <img id="computer" src="media/rock.png">
+        </td>
+        <td>
+            <p class="banner3">You</p>
+            <img id="player" src="media/rockplayer.png">
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+<div>
+    <label for="hand">Choose:</label>
+        <select name="hand" id="hands">
+            <option value="rock">rock</option>
+            <option value="paper">paper</option>
+            <option value="scissors">scissors</option>
+        </select> 
+        <button onclick="playGame()">Throw!</button> 
+</div>
+
+</div>
+</main>
+
+<script src="js/rockpaperscissors.js"></script>	
+<script src="js/gamezone.js"></script>
+
+</body>
+</html>

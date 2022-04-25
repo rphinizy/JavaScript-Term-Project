@@ -1,0 +1,33 @@
+table{
+    width: 60%;
+    margin:auto;
+}
+div{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin:auto;
+    max-width: 65%;
+
+}
+tr{
+    height: 300px;
+}
+
+td{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.container{
+        margin: auto;
+        padding: 20px;
+        background-color: rgb(2, 13, 59);
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px black;
+        border: solid white 2px;
+        width:50%;
+        height: 650px;
+    }
